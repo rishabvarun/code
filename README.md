@@ -1,1 +1,1 @@
-# This repository contains code to some of the interesting coding problems
+# This repository contains code of some interesting competitive coding problems
