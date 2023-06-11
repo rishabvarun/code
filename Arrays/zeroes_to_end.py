@@ -1,6 +1,6 @@
 A = [0, 2, 3, 0, 5, 0, 10, 0, 0, 1]
 
-def zeroes_to_end(A):
+def zeroes_to_end_swap(A):
 
     c = 0 # Count of non zero elements
     i, n = 0, len(A)
@@ -13,5 +13,23 @@ def zeroes_to_end(A):
 
     return A
 
-A = zeroes_to_end(A)
+def zeroes_to_end_count(arr):
+    
+    non_zero = 0
+    i, n = 0, len(arr)
+    
+    while i < n:
+        if arr[i] != 0:
+            arr[non_zero] = arr[i]
+            non_zero += 1
+        i += 1
+    
+    for i in range(non_zero + 1, n):
+        arr[i] = 0
+        
+    return arr
+                      
+A = zeroes_to_end_swap(A)
+print(A)
+A = zeroes_to_end_count(A)
 print(A)
